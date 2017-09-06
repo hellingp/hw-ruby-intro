@@ -62,7 +62,7 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # I need to come with with regular expression so s is just 0 and 1
+  # I need to come with with a regular expression so s is just 0 and 1
   # and ignore empty strings
   if /[^01]/.match(s) or s.empty?
     return false
@@ -110,7 +110,8 @@ class BookInStock
     @price = x
   end
   def price_as_string()
-    # Do something with @balance
+    # Do something with @bprice
+    # I used sprintf() because I wanted to store a formatted print to a string
     s = sprintf("$%.2f", @price)
   end
 end
